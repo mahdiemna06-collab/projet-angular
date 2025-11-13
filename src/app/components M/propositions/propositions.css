@@ -1,0 +1,94 @@
+.carousel {
+  width: 85%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  background: #f8f3ee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.572);
+}
+
+.carousel-track {
+  display: flex;
+  animation: slide 19s infinite;
+}
+
+.card {
+  min-width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+  background-color: rgb(245, 234, 220);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.card img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin: 8px 0 4px;
+  color: rgb(88, 26, 1);
+}
+
+.card p {
+  color: rgb(88, 26, 1);
+  margin: 3px 0;
+  font-size: 1rem;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  25%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }
+}
+.total{
+padding-top: 40px;
+padding-left: 240px;
+}
+.active{
+  color:brown;
+  font-weight: bolder;
+}
+
+.nav {
+  background-color: #f6e7d7; /* beige clair */
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.nav-link {
+  color: #7b3f00 !important; /* marron doux */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #b85c00 !important; /* marron doré au survol */
+  text-decoration: underline;
+}
+
+.active {
+  color: #5a2e0c !important; /* plus foncé quand actif */
+  border-bottom: 3px solid #5a2e0c;
+}
+
+.header{
+  border:1px solid   #5a2e0c ;
+  border-radius: 12px;
+  box-shadow:0 6px 20px rgba(123, 63, 0.06) ;
+}

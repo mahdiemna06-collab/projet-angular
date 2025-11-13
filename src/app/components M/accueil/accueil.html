@@ -1,0 +1,45 @@
+<div class="header">
+  <nav class="navbar navbar-expand-lg shadow-brown">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-brown">
+        <i class="bi bi-cup-hot-fill me-2"></i>
+        Echos du Jasmin
+      </a>
+
+      <ul class="navbar-nav ms-auto">
+         <li class="nav-item">
+          <a routerLink="/accueil" routerLinkActive="active" class="nav-link text-brown">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/propositions" routerLinkActive="active" class="nav-link text-brown">Propositions</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/planDuSite" routerLinkActive="active" class="nav-link text-brown">Plan du site</a>
+        </li>
+          <li class="nav-item">
+          <a routerLink="/ajouter-cafer" routerLinkActive="active" class="nav-link text-brown">Ajouter un cafe</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/Apropos" routerLinkActive="active" class="nav-link text-brown">À propos</a>
+        </li>
+       
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container mt-4">
+  <h1 class="text-center text-brown fw-bold mb-4">Bienvenue sur les "Echos du Jasmin"</h1>
+  <div class="video-container">
+<video width="640" height="360"   autoplay  loop
+  style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);">
+  <source [src]="videoSRC" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+</div>
+
+
+
+
+  <router-outlet></router-outlet>
+</div>

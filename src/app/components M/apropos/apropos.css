@@ -1,0 +1,42 @@
+button{
+  margin-left: 1600px;
+}
+
+
+.about {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+ h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  background-color:rgb(255, 211, 181) ;
+  color: white;
+  height:300px ;
+  justify-content: center  ;
+  padding-left: 900px;
+  padding-top: 40px;
+}
+
+.cafe-photo {
+  width: 60%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  width: 60%;
+  margin: 0 auto 15px;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}

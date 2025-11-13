@@ -1,0 +1,42 @@
+<div class="header">
+  <nav class="navbar navbar-expand-lg shadow-brown">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-brown">
+        <i class="bi bi-cup-hot-fill me-2"></i>
+        Echos du Jasmin
+      </a>
+
+      <ul class="navbar-nav ms-auto">
+         <li class="nav-item">
+          <a routerLink="/accueil" routerLinkActive="active" class="nav-link text-brown">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/propositions" routerLinkActive="active" class="nav-link text-brown">Propositions</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/planDuSite" routerLinkActive="active" class="nav-link text-brown">Plan du site</a>
+        </li>
+         <li class="nav-item">
+          <a routerLink="/ajouter-cafer" routerLinkActive="active" class="nav-link text-brown">Ajouter un cafe</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/Apropos" routerLinkActive="active" class="nav-link text-brown">À propos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="total">
+  <h3>Nos plus belles thématiques</h3>
+<div class="carousel">
+  <div class="carousel-track">
+    @for (c of liste; track $index) {
+      <div class="card">
+///ajouter les photos        <h3><i class="bi bi-cup-hot-fill"></i>{{ c.nom }}</h3>
+        <p><i class="bi bi-geo-alt-fill"></i>{{ c.localisation }}</p><p>Depuis {{c.dateCreaction}}</p><p>{{c.specialite}}</p>
+        <p><strong>{{ c.budget }} DT</strong></p>
+      </div>
+    }
+  </div>
+</div>
+</div>

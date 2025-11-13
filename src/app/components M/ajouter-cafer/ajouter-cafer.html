@@ -1,0 +1,52 @@
+<div class="header">
+  <nav class="navbar navbar-expand-lg shadow-brown">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-brown">
+        <i class="bi bi-cup-hot-fill me-2"></i>
+        Echos du Jasmin
+      </a>
+
+      <ul class="navbar-nav ms-auto">
+         <li class="nav-item">
+          <a routerLink="/accueil" routerLinkActive="active" class="nav-link text-brown">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/propositions" routerLinkActive="active" class="nav-link text-brown">Propositions</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/planDuSite" routerLinkActive="active" class="nav-link text-brown">Plan du site</a>
+        </li>
+         <li class="nav-item">
+          <a routerLink="/ajouter-cafer" routerLinkActive="active" class="nav-link text-brown">Ajouter un cafe</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/Apropos" routerLinkActive="active" class="nav-link text-brown">À propos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container mt-5"><h2>Formulaire d'ajout de cafe:
+</h2>
+<form [formGroup]="ajoutCafeForm"  class="p-4 border rounded bg-light" (ngSubmit)="onsubmit() " >
+  <div class="mb-3">
+    <label for="nom" class="form-label">nom du cafe</label>
+    <input type="text" id="nom" class="form-control" formControlName="nom">
+    <label for="localisation" class="form-label">localisation</label><br>
+     <select name="localisation" formControlName="localisation">
+    @for (g of gouvernerats; track $index) {<option [value]="g">{{g}}</option>
+
+    }</select>
+
+       <label for="dateCreation" class="form-label">date de creation</label>
+       <input type="date" id="dateCreation" class="form-control" formControlName="dateCreation">
+        <label for="specialite" class="form-label">specialite du cafe</label>
+    <input type="text" id="specialite" class="form-control" formControlName="specialite">
+     <label for="specialite" class="form-label">budget (DT)</label>
+    <input type="number" id="budget" class="form-control" formControlName="budget">
+
+<button class="btn btn-primary" type="submit">Ajouter</button>
+
+  </div>
+</form>
+

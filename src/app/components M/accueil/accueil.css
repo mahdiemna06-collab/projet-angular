@@ -1,0 +1,51 @@
+.active{
+  color:brown;
+  font-weight: bolder;
+}
+
+.nav {
+  background-color: #f6e7d7; /* beige clair */
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.nav-link {
+  color: #7b3f00 !important; /* marron doux */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #b85c00 !important; /* marron doré au survol */
+  text-decoration: underline;
+}
+
+.active {
+  color: #5a2e0c !important; /* plus foncé quand actif */
+  border-bottom: 3px solid #5a2e0c;
+}
+h1{
+  color: #5a2e0c;
+}
+.header{
+  border:1px solid   #5a2e0c ;
+  border-radius: 12px;
+  box-shadow:0 6px 20px rgba(123, 63, 0.06) ;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px); 
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
