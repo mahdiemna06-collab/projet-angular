@@ -5,6 +5,7 @@ import { JsonPipe } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthentifierService } from '../../service/authentifier-service';
 
 
 
@@ -25,6 +26,11 @@ export class PlanDuSite implements OnInit {
 
   retourVersAjout() {
     this.router.navigate(['/ajouter-cafer']);
+  }
+  auth: AuthentifierService = inject(AuthentifierService);
+  deconnecter() {
+    this.auth.deconnected();
+    this.router.navigate(['/authentifier']);
   }
 
 }

@@ -5,27 +5,19 @@
         <i class="bi bi-cup-hot-fill me-2"></i>
         Echos du Jasmin
       </a>
-
-      <ul class="navbar-nav ms-auto">
-         <li class="nav-item">
-          <a routerLink="/accueil" routerLinkActive="active" class="nav-link text-brown">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a routerLink="/propositions" routerLinkActive="active" class="nav-link text-brown">Propositions</a>
-        </li>
-        <li class="nav-item">
+<ul class="navbar-nav ms-auto">
+ <li class="nav-item">
           <a routerLink="/planDuSite" routerLinkActive="active" class="nav-link text-brown">Plan du site</a>
         </li>
-         <li class="nav-item">
-          <a routerLink="/ajouter-cafer" routerLinkActive="active" class="nav-link text-brown">Ajouter un cafe</a>
-        </li>
         <li class="nav-item">
-          <a routerLink="/Apropos" routerLinkActive="active" class="nav-link text-brown">À propos</a>
+          <a routerLink="/ajouter-cafer" routerLinkActive="active" class="nav-link text-brown">Ajouter un café</a>
         </li>
-      </ul>
-    </div>
-  </nav>
+</ul>
 </div>
+</nav>
+</div>
+
+
 <div class="container mt-5"><h2>Formulaire d'ajout de cafe:
 </h2>
 <form [formGroup]="ajoutCafeForm"  class="p-4 border rounded bg-light" (ngSubmit)="onsubmit() " >

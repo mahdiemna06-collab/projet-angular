@@ -27,18 +27,42 @@
   </nav>
 </div>
 
-<div class="container mt-4">
-  <h1 class="text-center text-brown fw-bold mb-4">Bienvenue sur les "Echos du Jasmin"</h1>
-  <div class="video-container">
-<video width="640" height="360"   autoplay  loop
-  style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.25);">
-  <source [src]="videoSRC" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
+<!--partie authentifier-->
+
+<div class="form">
+  <div class="container mt-5">
+    <h2>S'authentifier</h2>
+
+    <!-- FORMULAIRE CORRECTEMENT FERME -->
+    <form [formGroup]="formAuthentifier"
+          class="p-4 border rounded bg-light"
+          (ngSubmit)="onSubmit()">
+
+      <div class="mb-3">
+        <label for="username" class="form-label">Username :</label>
+        <input type="text"
+               id="username"
+               class="form-control"
+               formControlName="Username">
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password :</label>
+        <input type="password"
+               id="password"
+               class="form-control"
+               formControlName="motDePasse">
+      </div>
+
+      <!-- BOUTON A L'INTERIEUR DU FORMULAIRE -->
+    <button type="submit" class="btn btn-primary">
+  Se connecter
+</button>
+
+
+
+    </form>
+  </div>
 </div>
 
 
-
-
-  <router-outlet></router-outlet>
-</div>
