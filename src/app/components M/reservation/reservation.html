@@ -1,0 +1,42 @@
+<h1>Réserver un café</h1>
+
+<form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+
+  <div class="mb-3">
+    <label>Nom</label>
+    <input type="text" formControlName="nom" class="form-control">
+    @if(isNomInvalid()) {
+    <div class="text-danger">
+      @if(nom?.errors?.['required']) { <small>Le nom est obligatoire</small> }
+      @if(nom?.errors?.['maxlength']) { <small>Max 10 caractères</small> }
+      @if(nom?.errors?.['pattern']) { <small>Doit commencer par une majuscule</small> }
+    </div>
+  }
+  </div>
+
+  <div class="mb-3">
+    <label>Prénom</label>
+    <input type="text" formControlName="prenom" class="form-control">
+    @if(isPrenomInvalid()) {
+  <div class="text-danger">
+    @if(prenom?.errors?.['required']) { <small>Le prénom est obligatoire</small> }
+    @if(prenom?.errors?.['maxlength']) { <small>Max 10 caractères</small> }
+    @if(prenom?.errors?.['pattern']) { <small>Doit commencer par une majuscule</small> }
+  </div>
+}
+
+  </div>
+
+  <div class="mb-3">
+    <label>Quand ?</label><br>
+    <label><input type="radio" formControlName="quand" value="Matin"> Matin</label>
+    <label><input type="radio" formControlName="quand" value="Soir"> Soir</label>
+    @if(isQuandInvalid()) {
+      <div class="text-danger"><small>Veuillez sélectionner un créneau</small></div>
+    }
+  </div>
+
+  <button type="submit" class="btn btn-primary">Réserver</button>
+  <button type="button" (click)="retourVersListe()" class="btn btn-primary">Précédent</button>
+</form>
+

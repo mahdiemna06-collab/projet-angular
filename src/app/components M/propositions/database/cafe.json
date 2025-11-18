@@ -1,289 +1,234 @@
 {
-    "cafes": [
+  "cafes": [
     {
-
-    "id":"1" ,
-    "nom":"Saf-Saf La marsa" ,
-    "localisation":"Tunis",
-    "photo" : "images/safsaf.jpg" ,
-    "dateCreaction":"1950-12-11" , 
-    "specialite":"thé à la menthe, café turc, brick à l'œuf, ambiance traditionnelle avec puits ancien", 
-    "budget": 15 
-    
-
-    },
-     {
-
-    "id":"2" ,
-    "nom":"Cafe des delices Sidi Bou Said " ,
-    "localisation":"Tunis",
-    "photo" : "images/cafedesdelices.jpg" ,
-    "dateCreaction":"1960-10-17" , 
-    "specialite":"Terrasse panoramique sur le golfe de Tunis, café/boissons, cadre touristique mais aussi local", 
-    "budget": 20 
-    
-
-    },
-     {
-
-    "id":"3" ,
-    "nom":"Cafe de la vigne La Medina" ,
-    "localisation":"Tunis",
-    "photo" : "images/rbat.jpg" ,
-    "dateCreaction":"1960-05-17" , 
-    "specialite":"Café, thé, ambiance ancienne/timeless, lieu de pause au cœur de la médina", 
-    "budget": 5
-    
-
-    },
-     {
-
-    "id":"4" ,
-    "nom":"Cafe de Paris la Medina" ,
-    "localisation":"Tunis",
-    "photo" : "images/paris.jpg" ,
-    "dateCreaction":"1940-08-28" , 
-    "specialite":"Café/brasserie élégant, lieu de rencontre artistique et familiaux autrefois", 
-    "budget": 30
-    
-
+      "id": "1",
+      "nom": "Saf-Saf La marsa",
+      "localisation": "Tunis",
+      "photo": "images/safsaf.webp",
+      "dateCreaction": "1950-12-11",
+      "specialite": "thé à la menthe, café turc, brick à l'œuf, ambiance traditionnelle avec puits ancien",
+      "budget": 15,
+      "likes": 207
     },
     {
-
-    "id":"5" ,
-    "nom":"Cafe de l Univers " ,
-    "localisation":"Tunis",
-    "photo" : "images/univers.jpg" ,
-    "dateCreaction":"1948-02-13" , 
-    "specialite":"Café-bar emblématique pour étudiants progressistes des années 50-60, lieu social et culturel", 
-    "budget": 20
-    
-
-    },
-     {
-
-    "id":"6" ,
-    "nom":"Cafe Kemour Sfax " ,
-    "localisation":"Sfax",
-    "photo" : "images/kemour.jpg" ,
-    "dateCreaction":"1840-01-11" , 
-    "specialite":"Café-salon de thé traditionnel, terrasse sur le toit avec belle vue sur la Grande Mosquée", 
-    "budget": 10
-    
-
-    },
-     {
-
-    "id":"7" ,
-    "nom":"Cafe des Nattes Sidi Bou Said " ,
-    "localisation":"Tunis",
-    "photo" : "images/nattes.jpg" ,
-    "dateCreaction":"1980-01-16" , 
-    "specialite":"Café emblématique au décor tunisien traditionnel, lieu très fréquenté par les visiteurs, ambiance «vue bleue et blanche", 
-    "budget": 15
-    
-
-    },
-     {
-
-    "id":"8" ,
-    "nom":"cafe Tziri 13 sousse  " ,
-    "localisation":"Sousse",
-    "photo" : "images/tziri.jpg" ,
-    "dateCreaction":"1980-01-16" , 
-    "specialite":"Café culturel / mobilier artisanal tunisien, projections de films, concerts, ambiance créative", 
-    "budget": 10
-    
-
+      "id": "2",
+      "nom": "Cafe des delices Sidi Bou Said ",
+      "localisation": "Tunis",
+      "photo": "images/cafedesdelices.jpg",
+      "dateCreaction": "1960-10-17",
+      "specialite": "Terrasse panoramique sur le golfe de Tunis, café/boissons, cadre touristique mais aussi local",
+      "budget": 20,
+      "likes": 500
     },
     {
-
-    "id":"9" ,
-    "nom":"cafe Nuée  " ,
-    "localisation":"Tunis",
-    "photo" : "images/nuee.jpg" ,
-    "dateCreaction":"1920-04-29" , 
-    "specialite":"Café/brasserie francaise historique dans la capitale tunisienne, ambiance coloniale", 
-    "budget": 7
-    
-
+      "id": "3",
+      "nom": "Cafe de la vigne La Medina",
+      "localisation": "Tunis",
+      "photo": "images/rbat.jpg",
+      "dateCreaction": "1960-05-17",
+      "specialite": "Café, thé, ambiance ancienne/timeless, lieu de pause au cœur de la médina",
+      "budget": 5,
+      "likes": 91
     },
     {
-
-    "id":"10" ,
-    "nom":"cafe Dinar " ,
-    "localisation":"Tunis",
-    "photo" : "images/dinar.jpg" ,
-    "dateCreaction":"1630-06-19" , 
-    "specialite":"Café modeste, traditionnelle, lieu de rassemblement étudiant à l’époque", 
-    "budget": 5
-    
-
-    },
-     {
-
-    "id":"11" ,
-    "nom":"cafe Mrabet  " ,
-    "localisation":"Tunis",
-    "photo" : "images/mrabet.jpg" ,
-    "dateCreaction":"1615-06-07" , 
-    "specialite":"Très ancien café traditionnel, patrimoine de la médina", 
-    "budget": 5
-    
-
-    },
-     {
-
-    "id":"12" ,
-    "nom":"cafe Khotab Al Beb  " ,
-    "localisation":"Tunis",
-    "photo" : "images/khotab.jpg" ,
-    "dateCreaction":"1520-09-21" , 
-    "specialite":"Café traditionnel, décor ancien, voûtes, mosaïques,près de la Université Zitouna / Grande Mosquée.", 
-    "budget": 3
-    
-
-    },
-      {
-
-    "id":"13" ,
-    "nom":"cafe Ben Daamech Jerba  " ,
-    "localisation":"Djerba",
-    "photo" : "images/daamech.jpg" ,
-    "dateCreaction":"1983-03-03" , 
-    "specialite":"Large terrasse ensoleillée, décor d'agrumes à la façade, connu pour son jus d'orange frais.", 
-    "budget": 2
-    
-
-    },
-      {
-
-    "id":"14" ,
-    "nom":"El Fondouk Jerba  " ,
-    "localisation":"Djerba",
-    "photo" : "images/fondouk.jpg" ,
-    "dateCreaction":"1674-08-15" , 
-    "specialite":"Café/lounge installé dans un cadre historique, mêlant ancien et moderne.", 
-    "budget": 15
-    
-
-    },
-        {
-
-    "id":"15" ,
-    "nom":"cafe de la Paix Jerba  " ,
-    "localisation":"Djerba",
-    "photo" : "images/paix.jpg" ,
-    "dateCreaction":"1996-09-25" , 
-    "specialite":"Café/bistrot convivial, mêlant influences locales et façon française, ambiance artistique et détendue.", 
-    "budget": 20
-    
-
-    },
-        {
-
-    "id":"16" ,
-    "nom":"cafe Dar el Habib  " ,
-    "localisation":"Monastir",
-    "photo" : "images/habib.jpg" ,
-    "dateCreaction":"1915-01-18" , 
-    "specialite":"Résidence tunisienne traditionnelle transformée en café-culturel, avec décor à l'ancienne, antiquités, ambiance « musée-café »", 
-    "budget": 30
-    
-
-    },
-      {
-
-    "id":"17" ,
-    "nom":"cafe TakTak  " ,
-    "localisation":"Kairaouen",
-    "photo" : "images/taktak.jpg" ,
-    "dateCreaction":"1960-11-26" , 
-    "specialite":"Café traditionnel très fréquenté, notamment pour le café filtre (peu courant dans certaines villes tunisiennes)", 
-    "budget": 8
-    
-
-    },
-      {
-
-    "id":"18" ,
-    "nom":"cafe elKefi " ,
-    "localisation":"Kef",
-    "photo" : "images/kefi.jpg" ,
-    "dateCreaction":"1998-06-10" , 
-    "specialite":"Terrasse extérieure, accès handicapés mentionnés", 
-    "budget": 5
-    
-
-    },
-     {
-
-    "id":"19" ,
-    "nom":"cafe BenJemaa " ,
-    "localisation":"Gabes",
-    "photo" : "images/benjemaa.jpg" ,
-    "dateCreaction":"1932-11-14" , 
-    "specialite":"Terrasse avec belle vue panoramique, décor tapis berbères & coussins colorés, café-turc ou thé aux amandes", 
-    "budget": 5
-    
-
-    },
-     {
-
-    "id":"20" ,
-    "nom":"village Bleu " ,
-    "localisation":"Zaghouen",
-    "photo" : "images/villbleu.jpg" ,
-    "dateCreaction":"1950-07-15" , 
-    "specialite":"Café rustique panoramique au sommet du rocher, thé à la menthe ou café à la fleur d'oranger, ambiance artisanale & berbère", 
-    "budget": 10
-    
-
-    },
-     {
-
-    "id":"21" ,
-    "nom":"cafe du Fort kelibia " ,
-    "localisation":"Nabeul",
-    "photo" : "images/fort.jpg" ,
-    "dateCreaction":"1963-03-30" , 
-    "specialite":"Ancien marabout aménagé en café, avec chaises bleues/blanches, vue panoramique sur la ville et la mer, thé à la menthe aux pignons recommandé.", 
-    "budget": 15
-    
-
-    },
-     {
-
-    "id":"22" ,
-    "nom":"cafe sidi Bahri kelibia " ,
-    "localisation":"Nabeul",
-    "photo" : "images/bahri.jpg" ,
-    "dateCreaction":"1977-09-19" , 
-    "specialite":"Café en bord de mer très recommandé par les habitants. Pendant le festival de cinéma amateur d’août, un écran géant est installé dans l'eau, on regarde depuis la terrasse", 
-    "budget": 20
-    
-
+      "id": "4",
+      "nom": "Cafe de Paris la Medina",
+      "localisation": "Tunis",
+      "photo": "images/paris.jpg",
+      "dateCreaction": "1940-08-28",
+      "specialite": "Café/brasserie élégant, lieu de rencontre artistique et familiaux autrefois",
+      "budget": 30,
+      "likes": 651
     },
     {
-
-    "id":"23" ,
-    "nom":"cafe korbous " ,
-    "localisation":"Nabeul",
-    "photo" : "images/korbous.jpg" ,
-    "dateCreaction":"1951-05-31" , 
-    "specialite":"Petit café de village, cadre plus tranquille, parfois avec vue", 
-    "budget": 10
-    
-
+      "id": "5",
+      "nom": "Cafe de l Univers ",
+      "localisation": "Tunis",
+      "photo": "images/univers.jpg",
+      "dateCreaction": "1948-02-13",
+      "specialite": "Café-bar emblématique pour étudiants progressistes des années 50-60, lieu social et culturel",
+      "budget": 20,
+      "likes": 277
+    },
+    {
+      "id": "6",
+      "nom": "Cafe Kemour Sfax ",
+      "localisation": "Sfax",
+      "photo": "images/kemour.jpg",
+      "dateCreaction": "1840-01-11",
+      "specialite": "Café-salon de thé traditionnel, terrasse sur le toit avec belle vue sur la Grande Mosquée",
+      "budget": 10,
+      "likes": 98
+    },
+    {
+      "id": "7",
+      "nom": "Cafe des Nattes Sidi Bou Said ",
+      "localisation": "Tunis",
+      "photo": "images/nattes.jpg",
+      "dateCreaction": "1980-01-16",
+      "specialite": "Café emblématique au décor tunisien traditionnel, lieu très fréquenté par les visiteurs, ambiance «vue bleue et blanche",
+      "budget": 15,
+      "likes": 100
+    },
+    {
+      "id": "8",
+      "nom": "cafe Tziri 13 sousse  ",
+      "localisation": "Sousse",
+      "photo": "images/tziri.jpg",
+      "dateCreaction": "1980-01-16",
+      "specialite": "Café culturel / mobilier artisanal tunisien, projections de films, concerts, ambiance créative",
+      "budget": 10,
+      "likes": 89
+    },
+    {
+      "id": "9",
+      "nom": "cafe Nuée  ",
+      "localisation": "Tunis",
+      "photo": "images/nuee.jpg",
+      "dateCreaction": "1920-04-29",
+      "specialite": "Café/brasserie francaise historique dans la capitale tunisienne, ambiance coloniale",
+      "budget": 7,
+      "likes": 410
+    },
+    {
+      "id": "10",
+      "nom": "cafe Dinar ",
+      "localisation": "Tunis",
+      "photo": "images/dinar.jpg",
+      "dateCreaction": "1630-06-19",
+      "specialite": "Café modeste, traditionnelle, lieu de rassemblement étudiant à l’époque",
+      "budget": 5,
+      "likes": 732
+    },
+    {
+      "id": "11",
+      "nom": "cafe Mrabet  ",
+      "localisation": "Tunis",
+      "photo": "images/mrabet.jpg",
+      "dateCreaction": "1615-06-07",
+      "specialite": "Très ancien café traditionnel, patrimoine de la médina",
+      "budget": 5,
+      "likes": 298
+    },
+    {
+      "id": "12",
+      "nom": "cafe Khotab Al Beb  ",
+      "localisation": "Tunis",
+      "photo": "images/khotab.jpg",
+      "dateCreaction": "1520-09-21",
+      "specialite": "Café traditionnel, décor ancien, voûtes, mosaïques,près de la Université Zitouna / Grande Mosquée.",
+      "budget": 3,
+      "likes": 321
+    },
+    {
+      "id": "13",
+      "nom": "cafe Ben Daamech Jerba  ",
+      "localisation": "Djerba",
+      "photo": "images/daamech.jpg",
+      "dateCreaction": "1983-03-03",
+      "specialite": "Large terrasse ensoleillée, décor d'agrumes à la façade, connu pour son jus d'orange frais.",
+      "budget": 2,
+      "likes": 190
+    },
+    {
+      "id": "14",
+      "nom": "El Fondouk Jerba  ",
+      "localisation": "Djerba",
+      "photo": "images/fondouk.jpg",
+      "dateCreaction": "1674-08-15",
+      "specialite": "Café/lounge installé dans un cadre historique, mêlant ancien et moderne.",
+      "budget": 15,
+      "likes": 125
+    },
+    {
+      "id": "15",
+      "nom": "cafe de la Paix Jerba  ",
+      "localisation": "Djerba",
+      "photo": "images/paix.jpg",
+      "dateCreaction": "1996-09-25",
+      "specialite": "Café/bistrot convivial, mêlant influences locales et façon française, ambiance artistique et détendue.",
+      "budget": 20,
+      "likes": 293
+    },
+    {
+      "id": "16",
+      "nom": "cafe Dar el Habib  ",
+      "localisation": "Monastir",
+      "photo": "images/habib.jpg",
+      "dateCreaction": "1915-01-18",
+      "specialite": "Résidence tunisienne traditionnelle transformée en café-culturel, avec décor à l'ancienne, antiquités, ambiance « musée-café »",
+      "budget": 30,
+      "likes": 300
+    },
+    {
+      "id": "17",
+      "nom": "cafe TakTak  ",
+      "localisation": "Kairaouen",
+      "photo": "images/taktak.jpg",
+      "dateCreaction": "1960-11-26",
+      "specialite": "Café traditionnel très fréquenté, notamment pour le café filtre (peu courant dans certaines villes tunisiennes)",
+      "budget": 8,
+      "likes": 365
+    },
+    {
+      "id": "18",
+      "nom": "cafe elKefi ",
+      "localisation": "Kef",
+      "photo": "images/kefi.webp",
+      "dateCreaction": "1998-06-10",
+      "specialite": "Terrasse extérieure, accès handicapés mentionnés",
+      "budget": 5,
+      "likes": 954
+    },
+    {
+      "id": "19",
+      "nom": "cafe BenJemaa ",
+      "localisation": "Gabes",
+      "photo": "images/benjema.webp",
+      "dateCreaction": "1932-11-14",
+      "specialite": "Terrasse avec belle vue panoramique, décor tapis berbères & coussins colorés, café-turc ou thé aux amandes",
+      "budget": 5,
+      "likes": 348
+    },
+    {
+      "id": "20",
+      "nom": "village Bleu ",
+      "localisation": "Zaghouen",
+      "photo": "images/villbleu.jpg",
+      "dateCreaction": "1950-07-15",
+      "specialite": "Café rustique panoramique au sommet du rocher, thé à la menthe ou café à la fleur d'oranger, ambiance artisanale & berbère",
+      "budget": 10,
+      "likes": 129
+    },
+    {
+      "id": "21",
+      "nom": "cafe du Fort kelibia ",
+      "localisation": "Nabeul",
+      "photo": "images/fort.jpg",
+      "dateCreaction": "1963-03-30",
+      "specialite": "Ancien marabout aménagé en café, avec chaises bleues/blanches, vue panoramique sur la ville et la mer, thé à la menthe aux pignons recommandé.",
+      "budget": 18,
+      "likes": 934
+    },
+    {
+      "id": "22",
+      "nom": "cafe sidi Bahri kelibia ",
+      "localisation": "Nabeul",
+      "photo": "images/bahri.jpg",
+      "dateCreaction": "1977-09-19",
+      "specialite": "Café en bord de mer très recommandé par les habitants. Pendant le festival de cinéma amateur d’août, un écran géant est installé dans l'eau, on regarde depuis la terrasse",
+      "budget": 20,
+      "likes": 224
+    },
+    {
+      "id": "23",
+      "nom": "cafe korbous ",
+      "localisation": "Nabeul",
+      "photo": "images/korbous.jpg",
+      "dateCreaction": "1951-05-31",
+      "specialite": "Petit café de village, cadre plus tranquille, parfois avec vue",
+      "budget": 10,
+      "likes": 981
     }
-
-
-
-
-
-    
-
-    
-    
-    ]
+  ]
 }

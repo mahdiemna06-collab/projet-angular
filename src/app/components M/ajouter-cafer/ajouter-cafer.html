@@ -17,27 +17,38 @@
 </nav>
 </div>
 
-
 <div class="container mt-5"><h2>Formulaire d'ajout de cafe:
 </h2>
 <form [formGroup]="ajoutCafeForm"  class="p-4 border rounded bg-light" (ngSubmit)="onsubmit() " >
   <div class="mb-3">
-    <label for="nom" class="form-label">nom du cafe</label>
+    <label for="nom" class="form-label">Nom du cafe:</label>
     <input type="text" id="nom" class="form-control" formControlName="nom">
-    <label for="localisation" class="form-label">localisation</label><br>
+    @if (nom?.invalid && nom?.touched) {
+      <div class="alert alert-danger">Le nom n'est pas valide</div> <br>
+    }
+    <label for="localisation" class="form-label">Gouvernorat:</label><br>
      <select name="localisation" formControlName="localisation">
     @for (g of gouvernerats; track $index) {<option [value]="g">{{g}}</option>
 
-    }</select>
+    }</select><br>
 
-       <label for="dateCreation" class="form-label">date de creation</label>
+       <label for="dateCreation" class="form-label">Date de creation:</label>
        <input type="date" id="dateCreation" class="form-control" formControlName="dateCreation">
-        <label for="specialite" class="form-label">specialite du cafe</label>
+       @if (dateCreation?.invalid && nom?.touched) {
+      <div class="alert alert-danger">La date de création est invalide</div>
+    } <br>
+        <label for="specialite" class="form-label">Spécialité du café:</label>
     <input type="text" id="specialite" class="form-control" formControlName="specialite">
-     <label for="specialite" class="form-label">budget (DT)</label>
+    @if (specialite?.invalid && nom?.touched) {
+      <div class="alert alert-danger">La spécialité n'est pas valide</div>
+    } <br>
+     <label for="budget" class="form-label">budget (DT):</label> <br>
     <input type="number" id="budget" class="form-control" formControlName="budget">
-
-<button class="btn btn-primary" type="submit">Ajouter</button>
+    @if (budget?.invalid && nom?.touched) {
+      <div class="alert alert-danger">Le budget n'est pas valide</div>
+    }
+<br>
+<button class="btn btn-primary" type="submit" [disabled]="ajoutCafeForm.invalid">Ajouter</button>
 
   </div>
 </form>

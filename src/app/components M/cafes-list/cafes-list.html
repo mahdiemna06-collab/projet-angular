@@ -1,0 +1,142 @@
+<div class="header">
+  <nav class="navbar navbar-expand-lg shadow-brown">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-brown">
+        <i class="bi bi-cup-hot-fill me-2"></i>
+        Echos du Jasmin
+      </a>
+
+      <ul class="navbar-nav ms-auto">
+         <li class="nav-item">
+          <a routerLink="/accueil" routerLinkActive="active" class="nav-link text-brown">Accueil</a>
+        </li>
+         <li class="nav-item">
+          <a routerLink="/cafes-list" routerLinkActive="active" class="nav-link text-brown">Liste des cafes</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/propositions" routerLinkActive="active" class="nav-link text-brown">Propositions</a>
+        </li>
+
+
+        <li class="nav-item">
+          <a routerLink="/Apropos" routerLinkActive="active" class="nav-link text-brown">À propos</a>
+        </li>
+           <li class="nav-item">
+          <a routerLink="/authentifier" routerLinkActive="active" class="nav-link text-brown">s'authentifier</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+
+<!--<ul>
+@for(c of cafes ; track c.id){
+    <li>{{c.id}} -- {{c.nom}} -- {{c.localisation}}-- <img [src]="c.photo"></li>
+
+}
+</ul>-->
+
+<div class="container mt-4">
+  <h3 class="text-center mb-4 text-primary">
+     Liste des Cafés Tunisiens <i class="bi bi-cup-hot"></i>
+  </h3>
+<app-search-cafe
+  [cafes]="cafes"
+  (onSelectCafe)="selectCafeList($event)"
+></app-search-cafe>
+
+@if (!cafeSelectionne) {
+    <ul class="list-group">
+    @for (c of cafes; track c.id) {
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          <img
+            [src]="c.photo"
+            alt="photo café"
+            class="rounded"
+            style="width: 80px; height: 60px; object-fit: cover"
+          />
+          <div>
+            <strong class="text-dark"><i class="bi bi-geo-alt-fill text-danger"></i> {{ c.nom }}</strong><br />
+            <small class="text-muted">
+              📍 {{ c.localisation }} |
+              🏗️ Créé le : {{ c.dateCreaction  }}
+            </small><br />
+            <em>🍵 {{ c.specialite }}</em>
+          </div>
+        </div>
+
+        <div class="d-flex gap-2">
+          <button class="btn btn-sm btn-outline-success" (click)="onLike(c)">
+            <i class="bi bi-hand-thumbs-up-fill"></i> {{ c.likes }}
+          </button>
+
+           <button class="btn btn-sm btn-outline-warning"  (click)="onReserve()" > <!--(click)="onReservation(c)"-->
+            <i class="bi bi-calendar-plus">reservation</i>
+          </button>
+
+          <button class="btn btn-sm btn-outline-warning" (click)="onAddComment(c);onInfos(c)">
+            <i class="bi bi-calendar-plus">ajouter cmt</i>
+          </button>
+
+
+            <button class="btn btn-sm btn-outline-info" (click)="onInfos(c)">
+              ℹ️ Infos
+            </button>
+             <button class="btn btn-sm btn-outline-danger" (click)="onDelete(c)">
+            <i class="bi bi-trash3">supp</i>
+          </button>
+        </div>
+      </li>
+
+
+}
+
+  </ul>
+}@else {
+    <div class="card mx-auto mt-4 text-center" style="max-width: 500px;">
+      <img
+        [src]="cafeSelectionne.photo"
+        class="card-img-top"
+        alt="photo café"
+        style="height: 250px; object-fit: cover"
+      />
+      <div class="card-body">
+        <h4>{{ cafeSelectionne.nom }}</h4>
+        <p>📍 {{ cafeSelectionne.localisation }}</p>
+        <p><strong>Spécialité :</strong> 🍵 {{ cafeSelectionne?.specialite }}</p>
+        <p><strong>Budget :</strong> 💰 {{ cafeSelectionne?.budget }} DT</p>
+
+        <button class="btn btn-secondary" (click)="onRetour()">
+          ⬅️ Retour à la liste
+        </button>
+      </div>
+    </div>
+
+    <div class="card mt-3 p-3">
+    <h5>Ajouter un commentaire pour {{ cafeSelectionne.nom }}</h5>
+    <form [formGroup]="commentaireForm" (ngSubmit)="onAddComment(cafeSelectionne)">
+      <input type="text" formControlName="nom" placeholder="Nom" class="form-control mb-2">
+      <input type="text" formControlName="prenom" placeholder="Prénom" class="form-control mb-2">
+      <textarea formControlName="text" placeholder="Commentaire" class="form-control mb-2"></textarea>
+      <button type="submit" class="btn btn-warning">Ajouter</button>
+      <button type="button" class="btn btn-secondary" (click)="cafeSelectionne = undefined">Annuler</button>
+    </form>
+
+    <ul class="list-group mt-3">
+      @for(comment of cafeSelectionne.comments; track $index) {
+        <li class="list-group-item">
+          <strong>{{ comment.nom }} {{ comment.prenom }} :</strong> {{ comment.text }}
+        </li>
+      }
+    </ul>
+  </div>
+}
+
+</div>
+
+
+

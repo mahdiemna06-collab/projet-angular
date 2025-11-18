@@ -12,6 +12,7 @@ import { AuthentifierService } from '../../service/authentifier-service';
 
 @Component({
   selector: 'app-plan-du-site',
+  standalone: true,
   imports: [RouterLink,RouterLinkActive, JsonPipe],
   templateUrl: './plan-du-site.html',
   styleUrl: './plan-du-site.css',

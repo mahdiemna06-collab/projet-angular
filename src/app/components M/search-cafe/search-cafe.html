@@ -1,0 +1,52 @@
+<div class="container-fluid header">
+  <div class="input-group input-group-lg">
+    <span class="input-group-text">Nom</span>
+
+    <input
+      #nom
+      type="text"
+      class="form-control"
+      placeholder="ex: Saf-Saf La Marsa"
+      aria-label="Nom du café"
+      (input)="selectCafeList(nom.value)"
+    >
+
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="selectCafeList(nom.value)"
+    >
+      Search
+    </button>
+  </div>
+</div>
+
+<div class="container cafe-container">
+
+  <!-- Message si aucun café trouvé -->
+  @if(searchTerm !== '' && selectedCafes.length === 0){
+  <p>No cafe found!</p>
+}
+
+
+  <!-- Liste des cafés -->
+  @for (caf of selectedCafes; track caf.id; let indice = $index){
+    <div class="card" style="width: 18rem;">
+      <img [src]="caf.photo" class="card-img-top" alt="{{caf.nom}}">
+
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ indice + 1 }}. {{ caf.nom }} - {{ caf.dateCreaction }}
+        </h5>
+
+        <p class="card-text">Spécialité: {{ caf.specialite }}</p>
+        <p class="card-text">Budget: {{ caf.budget }}</p>
+       <!--<p class="card-text">Likes: {{ caf.likes }}</p>-->
+
+        <button class="btn btn-primary" (click)="showDetails(caf)">
+          More details
+        </button>
+      </div>
+    </div>
+  }
+</div>

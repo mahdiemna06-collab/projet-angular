@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ListeCafes } from '../models/liste-cafes';
 
-const API_URL="http://localhost:3000/cafes"
+const API_URL = "http://localhost:3000/cafes";
 @Injectable({
   providedIn: 'root',
 })
@@ -15,6 +15,13 @@ export class CafeServise {
   }
   public postCafe(c:ListeCafes): Observable<ListeCafes>{
     return this.http.post<ListeCafes>(API_URL, c);
-}
+  }
+   deleteCafe(id: string): Observable<any> {
+    return this.http.delete(`${API_URL}/${id}`);
+  }
+
+  updateCafe(c: ListeCafes): Observable<ListeCafes> {
+    return this.http.put<ListeCafes>(`${API_URL}/${c.id}`, c);
+  }
 }
 

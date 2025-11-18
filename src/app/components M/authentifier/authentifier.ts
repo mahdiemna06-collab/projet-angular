@@ -37,23 +37,26 @@ export class Authentifier implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.formAuthentifier.valid) {
+    if (this.formAuthentifier.invalid) return;
 
-      const nom = this.formAuthentifier.value.Username;
-      const mdp = this.formAuthentifier.value.motDePasse;
+    const nom = this.formAuthentifier.value.Username;
+    const mdp = this.formAuthentifier.value.motDePasse;
 
-      const adminExistant = this.admins.find(
-        admin => admin.username === nom && admin.password === mdp
-      );
+    /*const adminExistant = this.auth.verifierIdentifiants(nom, mdp);*/
+    //JSON serveur long donc le chargement d'admin.json est asychrone et se fait apres la vérification
+    this.auth.verifierIdentifiants(nom, mdp).subscribe(adminExistant => {
 
       if (adminExistant) {
+        console.log('authentification réussie !');
         this.auth.connected();
 
         this.router.navigate(['/planDuSite']);
 
       } else {
-        alert("Nom d'utilisateur ou mot de passe incorrect.");
+        console.log("Nom d'utilisateur ou mot de passe incorrect.");
       }
-    }
+    });
   }
 }
+
+

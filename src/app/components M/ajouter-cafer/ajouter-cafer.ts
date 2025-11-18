@@ -16,7 +16,7 @@ import { ListeCafes } from '../../models/liste-cafes';
 @Component({
   selector: 'app-ajouter-cafer',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule, ReactiveFormsModule],
+  imports: [ RouterLink, RouterLinkActive, CommonModule, ReactiveFormsModule],
   templateUrl: './ajouter-cafer.html',
   styleUrls: ['./ajouter-cafer.css'],
 })
@@ -42,9 +42,9 @@ export class AjouterCafer implements OnInit {
   ngOnInit(): void {
     this.ajoutCafeForm = this.fb.nonNullable.group({
       id: [this.cafes.length, Validators.required],
-      nom: ['nom du cafe', Validators.required],
-      Localisation: [this.gouvernerats[0]],
-      dateCreation: ['', Validators.required],
+      nom: ['Nom du Café', Validators.required],
+      Localisation: [this.gouvernerats[0].valueOf(),Validators.required],
+      dateCreation: [new Date(), Validators.required],
       specialite: ['', [Validators.required, Validators.pattern('^[A-Z][a-z]+$')]],
       budget: [15, [Validators.min(1), Validators.max(100)]]
 
@@ -65,5 +65,13 @@ export class AjouterCafer implements OnInit {
       alert("Veuillez remplir tous les champs correctement.");
     }
   }
+  ///les controles de saisie
+  get nom() { return this.ajoutCafeForm.get('nom'); }
+  get dateCreation() {
+    return this.ajoutCafeForm.get('dateCreation');
+  }
+  get specialite() { return this.ajoutCafeForm.get('specialite'); }
+  get budget() { return this.ajoutCafeForm.get('budget'); }
+
 
 }

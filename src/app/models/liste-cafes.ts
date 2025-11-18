@@ -6,8 +6,9 @@ export interface ListeCafes {
     photo : string ;
     dateCreaction:Date;
     specialite:String;
-    budget:number;
-    comments?: string[];
+  budget: number;
+  likes:number;
+    comments?: { nom: string; prenom: string; text: string }[];
 
 
-} 
+}

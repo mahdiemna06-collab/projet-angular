@@ -3,16 +3,14 @@ import { CanActivateFn, Router } from '@angular/router';
 import { AuthentifierService } from '../authentifier-service';
 
 export const authGuard: CanActivateFn = (route, state) => {
- const authentifierService: AuthentifierService = inject(AuthentifierService);
 
+  const auth = inject(AuthentifierService);
   const router = inject(Router);
 
-  if (authentifierService.isAdminConnected()) {
+  if (auth.isAdminConnected()) {
     return true;
   }
 
-
-  //en cas d'echec de connexion ou isAdminConnected()==falseon redirige vers la page d'authentification
-  router.navigate(['authentifier']);
+  router.navigate(['/authentifier']);
   return false;
 };

@@ -10,6 +10,9 @@
          <li class="nav-item">
           <a routerLink="/accueil" routerLinkActive="active" class="nav-link text-brown">Accueil</a>
         </li>
+         <li class="nav-item">
+          <a routerLink="/cafes-list" routerLinkActive="active" class="nav-link text-brown">Liste des cafes</a>
+        </li>
         <li class="nav-item">
           <a routerLink="/propositions" routerLinkActive="active" class="nav-link text-brown">Propositions</a>
         </li>
@@ -33,7 +36,6 @@
   <div class="container mt-5">
     <h2>S'authentifier</h2>
 
-    <!-- FORMULAIRE CORRECTEMENT FERME -->
     <form [formGroup]="formAuthentifier"
           class="p-4 border rounded bg-light"
           (ngSubmit)="onSubmit()">
@@ -54,8 +56,7 @@
                formControlName="motDePasse">
       </div>
 
-      <!-- BOUTON A L'INTERIEUR DU FORMULAIRE -->
-    <button type="submit" class="btn btn-primary">
+    <button type="submit" class="btn btn-primary" >
   Se connecter
 </button>
 
