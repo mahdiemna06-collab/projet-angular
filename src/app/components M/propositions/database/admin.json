@@ -1,9 +1,10 @@
 {
   "admins":[
     {"username":"Emna Mehdi",
-  "password":"1234"},
+  "password":"1234",
+"photo":"src/assets/imgs/emnamehdi.jpg"},
    {"username":"Emna Slaimi",
-  "password":"4321"}
+  "password":"4321","photo":"src/assets/imgs/emnaslaimi.jpeg"}
 
 
   ]

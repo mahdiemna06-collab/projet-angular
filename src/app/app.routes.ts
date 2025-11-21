@@ -9,6 +9,7 @@ import { Authentifier } from './components M/authentifier/authentifier';
 import { authGuard } from './service/guards/authentification.guard';
 import { CafesList } from './components M/cafes-list/cafes-list';
 import { Reservation } from './components M/reservation/reservation';
+import { Profil } from './components M/profil/profil';
 
 export const routes: Routes = [
   {
@@ -24,8 +25,8 @@ export const routes: Routes = [
   { path: 'Apropos', title: 'A propos', component: Apropos },
   {
     path: 'authentifier', title: "s'authentifier", component: Authentifier
-  },{ path: 'planDuSite', title: 'Plan du site', component: PlanDuSite,canActivate :[authGuard] },{ path: 'ajouter-cafer', title: "ajouter un cafe", component: AjouterCafer , canActivate :[authGuard] }
-
+  },{ path: 'planDuSite', title: 'Plan du site', component: PlanDuSite,canActivate :[authGuard] },{ path: 'ajouter-cafer', title: "ajouter un cafe", component: AjouterCafer , canActivate :[authGuard] },
+{ path: 'profil', title: "Mon profil ", component: Profil, canActivate :[authGuard] }
 
 
 

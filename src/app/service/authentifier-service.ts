@@ -23,11 +23,19 @@ export class AuthentifierService {
       admin => admin.username === username && admin.password === password
     );
   }*/
-  verifierIdentifiants(username: string, password: string) {
+verifierIdentifiants(username: string, password: string) {
   return this.adminService.getAdmins().pipe(
-    map(admins => admins.some(a => a.username === username && a.password === password))
+    map(admins => {
+      const isValid = admins.some(a => a.username === username && a.password === password);
+      if (isValid) {
+        localStorage.setItem('usernameActuel', username);
+        localStorage.setItem('mdpActuel', password);
+      }
+      return isValid;
+    })
   );
 }
+
 
 
   connected() {
@@ -40,4 +48,5 @@ export class AuthentifierService {
   isAdminConnected(): boolean {
     return this.isConnected;
   }
+
 }

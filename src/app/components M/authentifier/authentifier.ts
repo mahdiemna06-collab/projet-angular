@@ -47,13 +47,13 @@ export class Authentifier implements OnInit {
     this.auth.verifierIdentifiants(nom, mdp).subscribe(adminExistant => {
 
       if (adminExistant) {
-        console.log('authentification réussie !');
+        alert('authentification réussie !');
         this.auth.connected();
 
-        this.router.navigate(['/planDuSite']);
+        this.router.navigate(['/profil']);
 
       } else {
-        console.log("Nom d'utilisateur ou mot de passe incorrect.");
+        alert("Nom d'utilisateur ou mot de passe incorrect.");
       }
     });
   }

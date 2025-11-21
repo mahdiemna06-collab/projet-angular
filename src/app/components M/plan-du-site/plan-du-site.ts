@@ -5,7 +5,7 @@ import { JsonPipe } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AuthentifierService } from '../../service/authentifier-service';
+
 
 
 
@@ -23,15 +23,10 @@ export class PlanDuSite implements OnInit {
   ngOnInit(): void {
     this.cafeService.getCafes().subscribe(data => this.liste = data);
   }
-    constructor(private router: Router) { }
-
+  router: Router = inject(Router);
   retourVersAjout() {
     this.router.navigate(['/ajouter-cafer']);
   }
-  auth: AuthentifierService = inject(AuthentifierService);
-  deconnecter() {
-    this.auth.deconnected();
-    this.router.navigate(['/authentifier']);
-  }
 
+  
 }

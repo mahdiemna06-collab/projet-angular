@@ -24,13 +24,14 @@
   color: #5a2e0c !important; /* plus foncé quand actif */
   border-bottom: 3px solid #5a2e0c;
 }
-
+h1{
+  color: #5a2e0c;
+}
 .header{
   border:1px solid   #5a2e0c ;
   border-radius: 12px;
   box-shadow:0 6px 20px rgba(123, 63, 0.06) ;
 }
-
 .profile-menu {
   position: absolute;
   top: 45px;       /* un peu sous l’icône */
